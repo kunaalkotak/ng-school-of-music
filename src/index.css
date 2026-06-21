@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: #071330;
+    color: #ffffff;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #040d1f; }
+  ::-webkit-scrollbar-thumb { background: #38BDF8; border-radius: 2px; }
+  ::selection { background: rgba(56,189,248,0.2); color: #fff; }
+}
+
+@layer components {
+  /* Text gradients */
+  .sky-text {
+    background: linear-gradient(135deg, #38BDF8, #7dd3fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .red-text {
+    background: linear-gradient(135deg, #DC2626, #ef4444);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Cards */
+  .glass-card {
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(56,189,248,0.1);
+    transition: border-color 0.3s ease, background 0.3s ease;
+  }
+  .navy-card {
+    background: rgba(7,19,48,0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(56,189,248,0.08);
+  }
+
+  /* Buttons */
+  .btn-red {
+    background: linear-gradient(135deg, #DC2626, #b91c1c);
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-red:hover {
+    box-shadow: 0 0 24px rgba(220,38,38,0.45);
+    transform: translateY(-1px);
+  }
+
+  .btn-sky {
+    background: linear-gradient(135deg, #38BDF8, #0ea5e9);
+    color: #071330;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+  .btn-sky:hover {
+    box-shadow: 0 0 24px rgba(56,189,248,0.4);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline-sky {
+    border: 1.5px solid #38BDF8;
+    color: #38BDF8;
+    background: transparent;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  .btn-outline-sky:hover {
+    background: rgba(56,189,248,0.1);
+    box-shadow: 0 0 18px rgba(56,189,248,0.2);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline-white {
+    border: 1.5px solid rgba(255,255,255,0.35);
+    color: #fff;
+    background: transparent;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  .btn-outline-white:hover {
+    border-color: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.07);
+    transform: translateY(-1px);
+  }
+
+  /* Labels */
+  .section-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.82rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #38BDF8;
+  }
+
+  /* Dividers */
+  .sky-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(56,189,248,0.3), transparent);
+  }
+  .red-divider {
+    height: 2px;
+    background: linear-gradient(90deg, #DC2626, transparent);
+  }
+}
+
+@layer utilities {
+  .glow-sky { box-shadow: 0 0 30px rgba(56,189,248,0.15); }
+  .glow-red { box-shadow: 0 0 24px rgba(220,38,38,0.3); }
+  .text-glow-sky { text-shadow: 0 0 30px rgba(56,189,248,0.4); }
+}
+
+/* Backgrounds */
+.bg-navy-pattern {
+  background:
+    radial-gradient(ellipse at 15% 40%, rgba(56,189,248,0.06) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 20%, rgba(220,38,38,0.04) 0%, transparent 50%),
+    #071330;
+}
+
+/* Keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-14px); }
+}
+@keyframes glow {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 0.8; }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+@keyframes pulseRed {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(220,38,38,0.4); }
+  50%       { box-shadow: 0 0 0 12px rgba(220,38,38,0); }
+}
+
+.animate-float      { animation: float 6s ease-in-out infinite; }
+.animate-float-slow { animation: float 9s ease-in-out infinite 2s; }
+.animate-glow       { animation: glow 3s ease-in-out infinite; }
+.animate-pulse-red  { animation: pulseRed 2s ease-in-out infinite; }

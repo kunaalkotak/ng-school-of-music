@@ -216,7 +216,7 @@ export default function Contact() {
               <motion.div {...fadeUp(0.1)} className="rounded-xl overflow-hidden border border-sky-brand/15" style={{height:280}}>
                 <iframe
                   title="NG School of Music Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.3997485765!2d72.86520107497!3d19.113850481994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c51abaaaab%3A0x5e6d8e37cbba5234!2sNG%20School%20Of%20Music!5e0!3m2!1sen!2sin!4v1718000000001!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7539.992337853422!2d72.863883!3d19.107824!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c92d32f46515%3A0x8eef9b03864e0c84!2sNG%20SCHOOL%20OF%20MUSIC%20Class%7CSinging%20Class%7CKeybords%20Classes%20%7CGuitar%20Class%7CIndain%20Classical%20Andheri%20East!5e0!3m2!1sen!2sin!4v1782026348043!5m2!1sen!2sin"
                   width="100%" height="100%"
                   style={{border:0, filter:'invert(90%) hue-rotate(180deg) saturate(0.7) brightness(0.85)'}}
                   allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
